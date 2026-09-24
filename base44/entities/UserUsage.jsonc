@@ -1,0 +1,53 @@
+{
+  "name": "UserUsage",
+  "type": "object",
+  "title": "User Usage",
+  "properties": {
+    "prompt_count": {
+      "type": "integer",
+      "title": "Prompt Count",
+      "default": 0
+    },
+    "subscription_status": {
+      "type": "string",
+      "title": "Subscription Status",
+      "enum": [
+        "free",
+        "active",
+        "canceled"
+      ],
+      "default": "free"
+    },
+    "subscription_end": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Subscription End"
+    },
+    "stripe_customer_id": {
+      "type": "string",
+      "title": "Stripe Customer ID"
+    },
+    "stripe_subscription_id": {
+      "type": "string",
+      "title": "Stripe Subscription ID"
+    }
+  },
+  "required": [
+    "prompt_count",
+    "subscription_status"
+  ],
+  "rls": {
+    "read": {
+      "created_by_id": "{{user.id}}"
+    },
+    "create": {
+      "created_by_id": "{{user.id}}"
+    },
+    "update": {
+      "created_by_id": "{{user.id}}"
+    },
+    "delete": {
+      "created_by_id": "{{user.id}}"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Dashboard",
+  "type": "object",
+  "title": "Dashboard",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Name"
+    },
+    "items": {
+      "type": "array",
+      "title": "Items",
+      "items": {
+        "type": "object"
+      },
+      "default": []
+    }
+  },
+  "required": [
+    "name",
+    "items"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "SavedQuery",
+  "type": "object",
+  "title": "Saved Query",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Name"
+    },
+    "dataset_id": {
+      "type": "string",
+      "title": "Dataset ID"
+    },
+    "query": {
+      "type": "string",
+      "title": "SQL"
+    }
+  },
+  "required": [
+    "name",
+    "dataset_id",
+    "query"
+  ]
+}

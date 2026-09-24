@@ -1,0 +1,33 @@
+{
+  "name": "SavedChart",
+  "type": "object",
+  "title": "Saved Chart",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Name"
+    },
+    "dataset_id": {
+      "type": "string",
+      "title": "Dataset ID"
+    },
+    "dataset_name": {
+      "type": "string",
+      "title": "Dataset Name"
+    },
+    "chart_type": {
+      "type": "string",
+      "title": "Chart Type"
+    },
+    "config": {
+      "type": "object",
+      "title": "Chart Config"
+    }
+  },
+  "required": [
+    "name",
+    "dataset_id",
+    "chart_type",
+    "config"
+  ]
+}

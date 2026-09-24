@@ -1,0 +1,52 @@
+{
+  "name": "Dataset",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Dataset Name"
+    },
+    "file_name": {
+      "type": "string",
+      "title": "Source File"
+    },
+    "columns": {
+      "type": "array",
+      "title": "Column Schema",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "number",
+              "string",
+              "date",
+              "boolean"
+            ]
+          }
+        }
+      }
+    },
+    "rows": {
+      "type": "array",
+      "title": "Data Rows",
+      "items": {
+        "type": "object"
+      }
+    },
+    "row_count": {
+      "type": "integer",
+      "title": "Row Count"
+    }
+  },
+  "required": [
+    "name",
+    "columns",
+    "rows",
+    "row_count"
+  ]
+}
