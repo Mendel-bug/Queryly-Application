@@ -24,6 +24,7 @@ import Formulas from '@/pages/Formulas';
 import Dashboards from '@/pages/Dashboards';
 import Reports from '@/pages/Reports';
 import AskAi from '@/pages/AskAi';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -86,6 +87,7 @@ function App() {
           <AuthenticatedApp />
         </Router>
         <Toaster />
+        <SpeedInsights />
       </QueryClientProvider>
     </AuthProvider>
   )
